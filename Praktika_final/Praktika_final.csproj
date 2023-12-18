@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,8 +64,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin.cs">
+      <DependentUpon>Ratanushka.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrimeryAdmin.cs">
+      <DependentUpon>Ratanushka.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ratanushka.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ratanushka.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ratanushka.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ratanushka.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ratanushka.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ratanushka.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\RepositoryBase.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>Ratanushka.tt</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -65,6 +98,9 @@
     </Compile>
     <Compile Include="Views\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Товары.cs">
+      <DependentUpon>Ratanushka.tt</DependentUpon>
     </Compile>
     <Page Include="Views\DarkTheme.xaml">
       <SubType>Designer</SubType>
@@ -124,9 +160,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Ratanushka.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Ratanushka.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Ratanushka.edmx.diagram">
+      <DependentUpon>Ratanushka.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +197,21 @@
     <Resource Include="Images\user.png" />
     <Resource Include="Images\user2.png" />
     <Resource Include="Images\userpopa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ratanushka.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Ratanushka.Context.cs</LastGenOutput>
+      <DependentUpon>Ratanushka.edmx</DependentUpon>
+    </Content>
+    <Content Include="Ratanushka.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Ratanushka.edmx</DependentUpon>
+      <LastGenOutput>Ratanushka.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

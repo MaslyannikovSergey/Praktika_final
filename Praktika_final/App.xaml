@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:Praktika_final"
              StartupUri="Views/LoginView.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/DarkTheme.xaml"/>
+                <ResourceDictionary Source="Views/LightTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
