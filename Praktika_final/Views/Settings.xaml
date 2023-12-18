@@ -1,0 +1,48 @@
+﻿<Window x:Class="Praktika_final.Views.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika_final.Views"
+        mc:Ignorable="d"
+        WindowStyle="None"
+         ResizeMode="NoResize"
+         Background="Transparent"
+         AllowsTransparency="True"
+         WindowStartupLocation="CenterScreen"
+         Title="Settings" Height="100" Width="125" MouseDown="Window_MouseDown" Loaded="Window_Loaded">
+    <Border x:Name="Vneshniy" CornerRadius="12" BorderThickness="2">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/sattingpopa.jpg" Stretch="UniformToFill"/>
+        </Border.Background>
+        <Border CornerRadius="10"                    
+        BorderThickness="1"
+            Style="{DynamicResource BorderRamka}">
+
+            <Canvas>
+                <Button x:Name="btnClose"                          
+                    BorderThickness="0"
+                    Content="X"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    Grid.Column="3"
+                    Click="btnClose_Click"
+                    Style="{DynamicResource btnclstyle}"
+                    Template="{DynamicResource vid}" Canvas.Left="100" Canvas.Top="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                </Button>
+                <Border CornerRadius="10" Style="{DynamicResource BorderRamka2}" BorderThickness="1" Width="120" Canvas.Top="20" >
+
+                    <StackPanel>
+                        <Label HorizontalAlignment="Center" Style="{DynamicResource labelStyle}" Content="Настройки" FontSize="12"/>
+                        <DockPanel>
+                            <Label Content="Смена темы" Style="{DynamicResource labelStyle}" HorizontalAlignment="Left"/>
+                            <CheckBox x:Name="pepka" Style="{DynamicResource ChSt}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                        </DockPanel>
+                    </StackPanel>
+                </Border>
+            </Canvas>
+        </Border>
+    </Border>
+</Window>
