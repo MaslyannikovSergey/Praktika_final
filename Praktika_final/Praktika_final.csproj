@@ -67,6 +67,9 @@
     <Compile Include="Admin.cs">
       <DependentUpon>Ratanushka.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\BindablePasswordBox.xaml.cs">
+      <DependentUpon>BindablePasswordBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrimeryAdmin.cs">
       <DependentUpon>Ratanushka.tt</DependentUpon>
     </Compile>
@@ -102,6 +105,10 @@
     <Compile Include="Товары.cs">
       <DependentUpon>Ratanushka.tt</DependentUpon>
     </Compile>
+    <Page Include="CustomControls\BindablePasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DarkTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
