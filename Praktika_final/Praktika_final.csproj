@@ -93,6 +93,12 @@
     <Compile Include="User.cs">
       <DependentUpon>Ratanushka.tt</DependentUpon>
     </Compile>
+    <Compile Include="Views\AddZapis.xaml.cs">
+      <DependentUpon>AddZapis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -106,6 +112,14 @@
       <DependentUpon>Ratanushka.tt</DependentUpon>
     </Compile>
     <Page Include="CustomControls\BindablePasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddZapis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
